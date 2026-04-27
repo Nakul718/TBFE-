@@ -1,0 +1,10 @@
+This project is a simple and interactive Mini Calculator built using HTML, CSS, and JavaScript.
+It performs basic arithmetic operations such as addition, subtraction, and multiplication.
+The user enters two numbers through input fields provided on the webpage.
+Buttons are used to select the desired operation.
+The interface is designed using HTML for structure and CSS for styling and layout.
+The design is clean, centered, and user-friendly for easy interaction.
+JavaScript is used to handle user inputs and perform calculations.
+Event listeners detect button clicks and trigger the respective operations.
+The result is displayed instantly on the screen without refreshing the page.
+The project demonstrates basic concepts like DOM manipulation and event handling.
