@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Calculator Using JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      text-align: center;
+      background: #f7f7f7;
+    }
+
+    .calculator {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 24px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px;
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      background: #1f6feb;
+      color: #fff;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1558b0;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h2>Mini Calculator</h2>
+    <input type="number" id="num1" placeholder="Enter first number" />
+    <input type="number" id="num2" placeholder="Enter second number" />
+
+    <div class="buttons">
+      <button type="button" id="addBtn">Add</button>
+      <button type="button" id="subtractBtn">Subtract</button>
+      <button type="button" id="multiplyBtn">Multiply</button>
+    </div>
+
+    <p id="result">Result will appear here</p>
+  </div>
+
+  <script>
+    const num1Input = document.getElementById('num1');
+    const num2Input = document.getElementById('num2');
+    const resultParagraph = document.getElementById('result');
+
+    function getValues() {
+      return {
+        num1: parseFloat(num1Input.value),
+        num2: parseFloat(num2Input.value)
+      };
+    }
+
+    function showResult(value) {
+      resultParagraph.textContent = `Result: ${value}`;
+    }
+
+    document.getElementById('addBtn').addEventListener('click', function () {
+      const values = getValues();
+      showResult(values.num1 + values.num2);
+    });
+
+    document.getElementById('subtractBtn').addEventListener('click', function () {
+      const values = getValues();
+      showResult(values.num1 - values.num2);
+    });
+
+    document.getElementById('multiplyBtn').addEventListener('click', function () {
+      const values = getValues();
+      showResult(values.num1 * values.num2);
+    });
+  </script>
+</body>
+</html>
