@@ -1,0 +1,17 @@
+Task Explanation-
+The task is to create a simple web page using HTML and CSS that displays an image along with a caption.
+
+A heading is added to describe the content (My Favorite Place)
+An image is displayed using the <img> tag (from an online source)
+A short paragraph is written below the image as a caption
+Basic CSS is used to:
+Center the content
+Style the text
+Adjust the image size
+
+Objective-
+To understand how to:
+
+Structure a basic HTML page
+Display images on a webpage
+Apply simple CSS styling
